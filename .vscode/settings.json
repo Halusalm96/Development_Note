@@ -1,0 +1,10 @@
+{
+  "emeraldwalk.runonsave": {
+    "commands": [
+      {
+        "match": ".*\\.md$",
+        "cmd": "node ${workspaceFolder}/scripts/md-to-json.js ${file}"
+      }
+    ]
+  }
+}
