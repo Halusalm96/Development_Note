@@ -1,0 +1,91 @@
+# 일반 4WD 모바일 로봇 (ROS 2 + Gazebo + Nav2)
+
+## robot.urdf.xacro
+- 역할: 4WD 로봇의 URDF/Xacro 모델 정의. 섀시, 4바퀴 구동, 센서 포함.
+> 필수 선언:
+> - `<plugin>` 태그: Gazebo 차동구동 설정 (바퀴 조인트)
+> - `<gazebo><sensor>`: LiDAR, IMU, 카메라 플러그인 선언
+> - 센서 토픽명 (`/scan`, `/imu` 등)
+> - 프레임 이름 (`base_link`, `laser_link` 등)
+
+## my_world.sdf
+- 역할: Gazebo에서 사용할 시뮬 월드 정의.
+> 필수 선언:
+> - Ground plane, 중력, 조명 등 환경 요소
+> - 로봇 스폰 위치 (initial_pose)
+
+## simulation_launch.py
+- 역할: Gazebo 실행 + URDF 로딩 + robot_state_publisher 시작
+> 필수 선언:
+> - `robot_description` 파라미터 등록
+> - `use_sim_time: true`
+> - `spawn_entity` 포함
+> - RSP, joint_state_publisher 포함
+
+## nav2_bringup.launch.py
+- 역할: Nav2 전체 스택 실행
+> 필수 선언:
+> - `params_file` 지정 (YAML)
+> - `map`, `use_sim_time` 파라미터
+> - 좌표계 지정: `map`, `odom`, `base_link`
+
+## nav2_params.yaml
+- 역할: Nav2 구성 요소별 설정 (planner, controller, AMCL 등)
+> 필수 선언:
+> - `use_sim_time: true`
+> - 좌표계: `global_frame`, `robot_base_frame`
+> - `/scan`, `/odom` 토픽 지정
+> - costmap, footprint, inflation 설정 등
+
+---
+
+# 🐢 TurtleBot 스타일 4WD 로봇 (ROS 2 + Gazebo + Nav2)
+
+## turtlebot3_<model>.urdf.xacro
+- 역할: TurtleBot3의 URDF/Xacro 모델 (Burger/Waffle/Waffle Pi 등)
+> 필수 선언:
+> - LDS-01 LiDAR, IMU 포함
+> - `<plugin>` 차동구동 플러그인
+> - 센서 플러그인(`<gazebo><sensor>`)
+> - `/scan`, `base_scan` 등 토픽/프레임 명
+
+## turtlebot3_world.sdf
+- 역할: TurtleBot3 예제 월드(Gazebo 환경)
+> 필수 선언:
+> - 기본 지면, 오브젝트, 조명 등
+> - 로봇 초기 위치 설정
+
+## turtlebot3_world.launch.py
+- 역할: Gazebo 실행 + 로봇 URDF 불러오기
+> 필수 선언:
+> - `TURTLEBOT3_MODEL` 환경 변수 지정 필수
+> - `use_sim_time: true`
+> - URDF 로드 + `spawn_entity` 포함
+
+## turtlebot3_navigation.launch.py
+- 역할: Nav2 실행 + RViz 등 포함
+> 필수 선언:
+> - `map`, `params_file` 지정 필수
+> - 좌표계/센서 토픽 매칭 (`/scan`, `/odom`)
+> - `use_sim_time: true`
+
+## <model>.yaml (예: waffle_pi.yaml)
+- 역할: 모델 전용 Nav2 파라미터
+> 필수 선언:
+> - `scan_topic: /scan`
+> - 프레임: `map`, `odom`, `base_link`
+> - 로봇 footprint, inflation radius
+> - DWB controller 속도/가속 제한
+
+---
+
+# 📌 참고
+
+## robot_state_publisher
+- 역할: URDF 기반 TF 생성
+
+## ros_gz_bridge
+- 역할: Gazebo ↔ ROS2 토픽 브릿지(`/scan`, `/cmd_vel`, `/odom`)
+
+## map.yaml, map.png
+- 역할: 맵 서버에서 지도 로딩용
