@@ -17,7 +17,7 @@
     "로봇 시뮬레이션 구축 과제"
   ],
   "작업_내용": [],
-  "LSA_UI_프로그램": "Default Sample Bottle -> Calibration Only Bottle 이름 변경 및 표 간격 수정",
+  "LAS_UI_프로그램": "Default Sample Bottle -> Calibration Only Bottle 이름 변경 및 표 간격 수정",
   "전처리기_컨트롤러_UbiHost": [
     "분석 결과 보고 Message 수정",
     "Message 추가",
