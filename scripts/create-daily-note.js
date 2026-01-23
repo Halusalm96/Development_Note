@@ -18,9 +18,6 @@ const template = `# ${dateStr} 개발 노트
 ## 날짜
 ${dateStr}
 
-## 오늘의 목표
-- 
-
 ## 오늘 한 일
 - 
 
