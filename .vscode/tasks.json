@@ -5,7 +5,15 @@
       "label": "Create Daily Note",
       "type": "shell",
       "command": "node",
-      "args": ["./scripts/create-daily-note.js"],
+      "args": ["${workspaceFolder}/scripts/create-daily-note.js"],
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "focus": false,
+        "panel": "dedicated",
+        "showReuseMessage": true,
+        "clear": true
+      },
       "runOptions": {
         "runOn": "folderOpen"
       }
