@@ -1,0 +1,6 @@
+{
+  "name": "development-note",
+  "version": "1.0.0",
+  "description": "개발 일일노트 및 주간업무보고 자동화",
+  "type": "module"
+}
