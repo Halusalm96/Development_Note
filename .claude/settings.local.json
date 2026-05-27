@@ -5,7 +5,10 @@
       "Bash(git commit *)",
       "Bash(git push *)",
       "Bash(not exist *)",
-      "Bash(code *)"
+      "Bash(code *)",
+      "Bash(start notepad++ \"F:\\\\1. Development_Note\\\\weekly_reports\\\\2026\\\\05\\\\5_3_Weekly_Journal.txt\")",
+      "Bash(notepad \"F:\\\\1. Development_Note\\\\weekly_reports\\\\2026\\\\05\\\\5_3_Weekly_Journal.txt\")",
+      "Bash(git rm *)"
     ]
   }
 }

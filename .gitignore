@@ -1,2 +1,9 @@
 .env
 node_modules/
+
+# 대용량 미디어 파일
+*.mov
+*.mp4
+*.avi
+*.mkv
+*.wmv
