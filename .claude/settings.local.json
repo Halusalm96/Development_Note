@@ -12,7 +12,9 @@
       "Bash(git reset *)",
       "Bash(git restore *)",
       "PowerShell(Get-Item *)",
-      "PowerShell(code *)"
+      "PowerShell(code *)",
+      "Bash(where notepad++.exe)",
+      "Bash(/c/Program Files/Notepad++/notepad++.exe *)"
     ]
   }
 }
