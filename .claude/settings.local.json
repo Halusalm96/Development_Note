@@ -14,7 +14,9 @@
       "PowerShell(Get-Item *)",
       "PowerShell(code *)",
       "Bash(where notepad++.exe)",
-      "Bash(/c/Program Files/Notepad++/notepad++.exe *)"
+      "Bash(/c/Program Files/Notepad++/notepad++.exe *)",
+      "Bash(powershell -NoProfile -Command \"Test-Path 'C:\\\\Program Files\\\\Notepad++\\\\notepad++.exe'\")",
+      "Bash(C:/Program Files/Notepad++/notepad++.exe *)"
     ]
   }
 }
