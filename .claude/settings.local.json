@@ -16,7 +16,10 @@
       "Bash(where notepad++.exe)",
       "Bash(/c/Program Files/Notepad++/notepad++.exe *)",
       "Bash(powershell -NoProfile -Command \"Test-Path 'C:\\\\Program Files\\\\Notepad++\\\\notepad++.exe'\")",
-      "Bash(C:/Program Files/Notepad++/notepad++.exe *)"
+      "Bash(C:/Program Files/Notepad++/notepad++.exe *)",
+      "Bash(command -v notepad++)",
+      "Read(//c/Program Files/Notepad\\\\+\\\\+/**)",
+      "Read(//c/Program Files \\\\\\(x86\\\\\\)/Notepad\\\\+\\\\+/**)"
     ]
   }
 }
