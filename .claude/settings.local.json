@@ -20,7 +20,10 @@
       "Bash(command -v notepad++)",
       "Read(//c/Program Files/Notepad\\\\+\\\\+/**)",
       "Read(//c/Program Files \\\\\\(x86\\\\\\)/Notepad\\\\+\\\\+/**)",
-      "Bash(PowerShell.exe -Command \"Get-Date -Year 2026 -Month 7 -Day 24 | Select-Object DayOfWeek\")"
+      "Bash(PowerShell.exe -Command \"Get-Date -Year 2026 -Month 7 -Day 24 | Select-Object DayOfWeek\")",
+      "Bash(where notepad++)",
+      "Bash(where /r \"C:\\\\Program Files\\\\Notepad++\" notepad++.exe)",
+      "Bash(where /r \"C:\\\\Program Files \\(x86\\)\\\\Notepad++\" notepad++.exe)"
     ]
   }
 }
