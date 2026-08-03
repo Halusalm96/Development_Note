@@ -23,7 +23,9 @@
       "Bash(PowerShell.exe -Command \"Get-Date -Year 2026 -Month 7 -Day 24 | Select-Object DayOfWeek\")",
       "Bash(where notepad++)",
       "Bash(where /r \"C:\\\\Program Files\\\\Notepad++\" notepad++.exe)",
-      "Bash(where /r \"C:\\\\Program Files \\(x86\\)\\\\Notepad++\" notepad++.exe)"
+      "Bash(where /r \"C:\\\\Program Files \\(x86\\)\\\\Notepad++\" notepad++.exe)",
+      "Bash(notepad++.exe \"E:/1. Development_Note/weekly_reports/2026/07/7_5_Weekly_Journal.txt\")",
+      "Bash(notepad \"E:/1. Development_Note/weekly_reports/2026/07/7_5_Weekly_Journal.txt\")"
     ]
   }
 }
